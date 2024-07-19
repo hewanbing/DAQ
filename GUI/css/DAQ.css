@@ -1,0 +1,127 @@
+.pad{
+    background-color:#94BED1;
+}
+.title{
+    position:relative;
+    top: 10px;
+    margin-bottom:20px;
+    text-align: center;
+}
+#main{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0; 
+    background-color:gray;
+}
+#leftPannel{
+    position:fixed;
+    top:0;
+    left:0;
+    width:50%;
+}
+#rightPannel{
+    position:fixed;
+    top:0;
+    right:0;
+    width:50%;
+}
+#Pattern{
+    position: relative;
+    top:10px;
+    left:1%;
+    width:98%;
+}
+#fileInput{
+    position:relative;
+    top:0px;
+}
+#DAQ{
+    position: relative;
+    top: 20px;
+    width:98%;
+    left: 1%;
+}
+#DAQBuffer{
+    position: relative;
+    top: 30px;
+    width:98%;
+    left: 1%;
+}
+.messageBox{
+    background-color:white;
+    margin-top:20px;
+    margin-left:1%;
+    width:97%;
+    height:100px;
+}
+#patternContent{
+    background-color:white;
+    margin-top:20px;
+    margin-left:1%;
+    width:97%;
+    height:800px;
+}
+#DPC{
+    position: relative;
+    top: 40px;
+    width:98%;
+    left:1%;
+}
+#DPCBuffer{
+    position: relative;
+    top: 50px;
+    width:98%;
+    left:1%;
+}
+#Monitor{
+    position: relative;
+    top: 60px;
+    width:98%;
+    left:1%;
+}
+button{
+    width:10%;
+}
+#DAQClear,#DPCClear,#MonitorClear,#MonitorCleanData{
+    width:20%;
+}
+#DAQBufferStatus,#DPCBufferStatus{
+    width:85%
+}
+input[type='checkbox'].switch{
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 10px;
+    transition: border-color .3s, background-color .3s;
+}
+
+input[type='checkbox'].switch::after {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height:1rem;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0, 0, 2px, #999;
+    transition:.4s;
+    top: 2px;
+    position: absolute;
+    left: 2px;
+}
+input[type='checkbox'].switch:checked {
+    background: rgb(19, 206, 102);
+}
+input[type='checkbox'].switch:checked::after {
+    content: '';
+    position: absolute;
+    left: 55%;
+    top: 2px;
+}

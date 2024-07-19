@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+  <title> Fudan-HIRG DAQ </title>
+  <link type="text/css" rel="stylesheet" href="css/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="css/jquery.handsontable.full.css">
+  
+  <script type="text/javascript" src='js/jquery-1.11.1.min.js'></script>
+  <script type="text/javascript" src='js/jquery-ui.min.js'></script>  
+  <script type="text/javascript" src='js/Please-compressed.js'></script>
+  <script type="text/javascript" src='js/knockout-3.2.0.js'></script>
+
+  <link type="text/css" rel="stylesheet" href="css/DAQ.css">
+
+</head>
+<body>
+  
+  <div id=main>
+    <div id=leftPannel>
+      <div id=Pattern class='pad'>
+	<div id=PatternTitle class='title'>Pattern (in JSON)</div>
+	<div>
+	  <button id="fileClear" type="button">Clear</button>
+	  <input type="file" id="fileInput" onchange="loadFile(this)">
+	</div>
+	<div>
+	  <textarea id="patternContent" class="messageBox"></textarea>
+	</div>
+      </div>
+    </div>
+    <div id=rightPannel>
+      <div id=DAQ class='pad'>
+	<div id=DAQTitle class='title'>DAQ</div>
+	<input id=DAQAutoRefresh type="checkbox">Auto Refresh</input>
+	<input id=DAQSwitch type="checkbox" class="switch">Switch</input>
+	<button id=DAQInit type="button">Init</button>
+	<button id=DAQStart type="button">Start</button>
+	<button id=DAQStop type="button">Stop</button>
+	<button id=DAQPause type="button">Pause</button>
+	<button id=DAQResume type="button">Resume</button>
+	<textarea id="DAQMessages" class="messageBox" readonly="readonly"></textarea>
+	<button id="DAQClear" type="button">Clear Messages</button>
+	<a>Status:</a>
+	<a id=DAQStatus></a>
+      </div>
+      <div id=DAQBuffer class='pad'>
+	<div id=DAQBufferTitle class='title'>DAQ Buffer Status</div>
+	<input id=DAQBufferAutoRefresh type="checkbox">Auto Refresh</input>
+	<progress id=DAQBufferStatus value="-1" max="100"></progress>
+      </div>
+      <div id=DPC class='pad'>
+	<div id=DPCTitle class='title'>DPC</div>
+	<input id=DPCAutoRefresh type="checkbox">Auto Refresh</input>
+	<input id=DPCSwitch type="checkbox" class="switch">Switch</input>
+	<button id=DPCStart type="button">Start</button>
+	<button id=DPCStop type="button">Stop</button>
+	<textarea id="DPCMessages" class='messageBox' readonly="readonly"></textarea>
+	<button id="DPCClear" type="button">Clear Messages</button>
+	<a>Status:</a>
+	<a id=DPCStatus></a>
+      </div>
+      <div id=DPCBuffer class='pad'>
+	<div id=DPCBufferTitle class='title'>DPC Buffer Status</div>
+	<input id=DPCBufferAutoRefresh type="checkbox">Auto Refresh</input>
+	<progress id=DPCBufferStatus value="-1" max="100"></progress>
+      </div>
+      <div id=Monitor class='pad'>
+	<div id=MonitorTitle class='title'>Monitor</div>
+	<input id=MonitorAutoRefresh type="checkbox">Auto Refresh</input>
+	<input id=MonitorSwitch type="checkbox" class="switch">Switch</input>
+	<button id=MonitorCleanData type="button">Clean Data</button>
+	<textarea id="MonitorMessages" class="messageBox" readonly="readonly"></textarea>
+	<button id=MonitorClear type="button">Clear Messages</button>
+	<a>Status:</a>
+	<a id=MonitorStatus></a>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
+
+<script type="text/javascript" src="js/DAQ.js"></script>
